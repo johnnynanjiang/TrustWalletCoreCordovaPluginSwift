@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="echo" version="0.2.3">
+    <name>EchoCordovaPluign</name>
+    <description>A simple example of using native code</description>
+    <license>MIT</license>
+    <keywords>cordova,echo</keywords>
+    <js-module src="www/echo.js" name="Echo">
+        <clobbers target="Echo" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="ios-package" value="Echo"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Echo.h" />
+        <source-file src="src/ios/Echo.m" />
+    </platform>
+</plugin>
