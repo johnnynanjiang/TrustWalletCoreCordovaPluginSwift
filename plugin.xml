@@ -8,13 +8,14 @@
     <js-module src="www/echo.js" name="Echo">
         <clobbers target="Echo" />
     </js-module>
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Echo">
                 <param name="ios-package" value="Echo"/>
             </feature>
         </config-file>
-        <header-file src="src/ios/Echo.h" />
-        <source-file src="src/ios/Echo.m" />
+        <source-file src="src/ios/Echo.swift" />
+        <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
     </platform>
 </plugin>

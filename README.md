@@ -1,27 +1,29 @@
 # Cordova Echo Extension
 
-This example project demonstrates how to create and extension for Cordova that uses native code.
+This example project demonstrates how to create and extension for Cordova that uses native swift code.
+
+For the Objective-C version go to https://github.com/nano3labs/echo-cordova
 
 ## Install
 
 1.
 
 ```
-git clone <echo-cordova repo>
-git clone <echo-cordova-plugin>
+git clone <echo-cordova-swift repo>
+git clone <echo-cordova-plugin-swift>
 ```
 
-You should now have `./echo-cordova`, `./echo-cordova-plugin`.
+You should now have `./echo-cordova-swift`, `./echo-cordova-plugin-swift`.
 
 Repos:
-* https://github.com/nano3labs/echo-cordova
-* https://github.com/nano3labs/echo-cordova-plugin
+* https://github.com/nano3labs/echo-cordova-swift
+* https://github.com/nano3labs/echo-cordova-plugin-swift
 
 2.
 ```
 cd ./echo-cordova
 cordova platform add ios
-cordova plugin add /full/path/to/echo-cordova-plugin
+cordova plugin add /full/path/to/echo-cordova-plugin-swift
 cordova build ios
 ```
 
@@ -40,4 +42,4 @@ Open `platforms/ios/EchoCordova.xcworkspace` in xcode and run either on the devi
 * https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/
 * https://cordova.apache.org/docs/en/latest/guide/platforms/ios/plugin.html
 * https://github.com/apache/cordova-plugin-camera
-
+* https://github.com/akofman/cordova-plugin-add-swift-support
