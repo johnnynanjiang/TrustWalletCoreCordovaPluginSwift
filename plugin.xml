@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="echo" version="0.2.3">
-    <name>EchoCordovaPluign</name>
-    <description>A simple example of using native code</description>
+        id="trustwalletcore" version="0.2.3">
+    <name>TrustWalletCore</name>
+    <description>Plugin for basic trust wallet core functions</description>
     <license>MIT</license>
-    <keywords>cordova,echo</keywords>
-   
-
-    <dependency id="cordova-plugin-cocoapod-support"/>
-    <dependency id="cordova-plugin-add-swift-support"/>
+    <keywords>cordova,trustwallet</keywords>
+    <js-module src="www/trustwallet.js" name="Trustwallet">
+        <clobbers target="Trustwallet" />
+    </js-module>
 
     <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="TrustWallet">
+                <param name="ios-package" value="TrustWallet"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/TrustWallet.swift" />
+        <dependency id="cordova-plugin-cocoapod-support"/>
+        <dependency id="cordova-plugin-add-swift-support"/>
          <pods-config ios-min-version="11.0" use-frameworks="true"/>
         <!-- Add the latest version of Google's Firebase Core -->
         <pod name="TrustWalletCore" />
