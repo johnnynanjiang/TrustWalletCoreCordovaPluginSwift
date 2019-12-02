@@ -1,5 +1,12 @@
-window.createWallet = function(str, callback) {
+window.createWallet = function(name, password, callback) {
   cordova.exec(callback, function(err) {
-      callback('Error creating wallet');
-  }, "TrustWallet", "createWallet", [str]);
+      callback(err);
+  }, "TrustWallet", "createWallet", [name, password]);
 };
+
+window.exportMnemonic = function(walletId, password, callback) {
+  cordova.exec(callback, function(err) {
+      callback(err);
+  }, "TrustWallet", "exportMnemonic", [walletId, password]);
+};
+
